@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Share Market Buy Sell Indicator</title>
+<meta name="description" content="Stock market charts, technical analysis and educational trading signals.">
+<style>
+:root{--bg:#08111f;--panel:#101d30;--panel2:#16263b;--text:#edf4ff;--muted:#91a4bd;--green:#19c784;--red:#ff647c;--line:#263950;--blue:#63a8ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,system-ui,Arial,sans-serif}
+header{padding:18px clamp(16px,4vw,48px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#0b1727}
+.brand{font-weight:800;letter-spacing:.4px;font-size:18px}.brand span{color:var(--green)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:13px}nav a:hover{color:white}
+main{max-width:1300px;margin:auto;padding:28px clamp(14px,3vw,36px) 50px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.5px}
+h1{font-size:clamp(27px,4vw,42px);line-height:1.12;margin:8px 0}h1 span{color:var(--green)}.sub{color:var(--muted);max-width:700px;margin:10px 0 24px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px;min-width:0}.card small,.muted{color:var(--muted)}.card strong{display:block;font-size:21px;margin-top:7px}.green{color:var(--green)}.red{color:var(--red)}
+.layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,.8fr);gap:16px}.panel h2{font-size:17px;margin:0 0 12px}.chart{height:510px}.widget{width:100%;height:100%}
+.signal{display:flex;align-items:center;justify-content:space-between;background:var(--panel2);padding:14px;border-radius:10px;margin:10px 0}.signal b{font-size:20px}.tag{font-size:11px;padding:4px 8px;border-radius:30px;background:#263950;color:#c6d7eb}
+.notice{border-left:3px solid #e7b64d;background:#2b261a;color:#f3dfad;padding:12px;border-radius:8px;font-size:12px;margin-top:14px}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.tool{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:12px}.tool h3{margin:0 0 5px;font-size:15px}.tool p{margin:0;color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);padding:22px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}.chart{height:440px}.tools{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){nav{gap:10px}.cards{gap:9px}.card{padding:13px}.card strong{font-size:18px}.tools{grid-template-columns:1fr}.chart{height:390px}}
+</style>
+</head>
+<body>
+<header><div class="brand">📈 SHARE MARKET <span>INDICATOR</span></div><nav><a href="#dashboard">Dashboard</a><a href="#charts">Charts</a><a href="#signals">Signals</a><a href="#learn">Learn</a></nav></header>
+<main>
+<section id="dashboard"><div class="eyebrow">INDIAN STOCK MARKET • TRADING DASHBOARD</div>
+<h1>BUY / SELL <span>INDICATOR</span></h1>
+<p class="sub">Track market charts and explore technical analysis. Use indicators as learning tools—not guaranteed predictions or personalised investment advice.</p>
+<div class="cards">
+<div class="card"><small>MARKET INDEX</small><strong>NIFTY 50</strong><span class="muted">Live chart below*</span></div>
+<div class="card"><small>BANKING INDEX</small><strong>BANK NIFTY</strong><span class="muted">Live chart below*</span></div>
+<div class="card"><small>TOOLS</small><strong>RSI · MACD</strong><span class="muted">Technical analysis</span></div>
+<div class="card"><small>STRATEGY</small><strong>EMA 20 / 50</strong><span class="muted">Trend learning</span></div>
+</div></section>
+<div class="layout">
+<section class="panel" id="charts"><h2>Market Chart</h2><div class="chart"><div class="tradingview-widget-container widget"><div id="tradingview_chart" style="height:100%;width:100%"></div><div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="muted">Charts powered by TradingView</span></a></div></div></div></section>
+<aside class="panel" id="signals"><h2>Signal Guide</h2>
+<div class="signal"><div><small class="muted">BULLISH SETUP</small><br><b class="green">BUY</b></div><span class="tag">Educational</span></div>
+<p class="muted">Example conditions to study:</p><ul><li>Price above EMA 20 and EMA 50</li><li>EMA 20 above EMA 50</li><li>RSI moving above 50</li></ul>
+<div class="signal"><div><small class="muted">BEARISH SETUP</small><br><b class="red">SELL</b></div><span class="tag">Educational</span></div>
+<p class="muted">Example conditions to study:</p><ul><li>Price below EMA 20 and EMA 50</li><li>EMA 20 below EMA 50</li><li>RSI moving below 50</li></ul>
+<div class="notice"><b>Important:</b> These are educational rule examples, not live signals. This page does not calculate or verify real-time BUY/SELL recommendations. Always confirm prices, use a stop-loss, and understand the risk before trading.</div>
+</aside></div>
+<section class="tools" id="learn">
+<div class="tool"><h3>📊 RSI</h3><p>Learn momentum and common overbought / oversold zones.</p></div>
+<div class="tool"><h3>📉 MACD</h3><p>Study momentum shifts and signal-line crossovers.</p></div>
+<div class="tool"><h3>📈 EMA 20 / 50</h3><p>Compare short- and medium-term trend direction.</p></div>
+</section>
+<section class="panel" style="margin-top:16px"><h2>How to use this website</h2><ol><li>Choose NIFTY 50 or another symbol in the chart.</li><li>Study price action and add indicators from the chart menu.</li><li>Practise on paper before risking real money.</li><li>Never treat a single indicator as a complete trading strategy.</li></ol></section>
+</main>
+<footer>© Share Market Buy Sell Indicator · Educational information only · Market data and chart availability depend on the third-party provider.</footer>
+<script src="https://s3.tradingview.com/tv.js" async onload="new TradingView.widget({autosize:true,symbol:'NSE:NIFTY',interval:'D',timezone:'Asia/Kolkata',theme:'dark',style:'1',locale:'en',enable_publishing:false,hide_top_toolbar:false,allow_symbol_change:true,container_id:'tradingview_chart',studies:['RSI@tv-basicstudies','MACD@tv-basicstudies']});"></script>
+</body></html>
